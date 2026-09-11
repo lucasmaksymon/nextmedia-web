@@ -1,0 +1,14 @@
+# Tipo MIME para WebP (necesario en servidores que no lo traen registrado)
+AddType image/webp .webp
+AddType video/mp4 .mp4
+
+# Cache largo para media estática
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType video/mp4 "access plus 1 year"
+</IfModule>
+
+# Redirigir sin-www -> www (unifica el SEO en una sola versión)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^nextmedia\.com\.ar$ [NC]
+RewriteRule ^(.*)$ https://www.nextmedia.com.ar/$1 [R=301,L]

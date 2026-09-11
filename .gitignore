@@ -1,0 +1,30 @@
+# Arte original y archivos que no van al hosting
+/_no-subir/
+
+# Paquetes de deploy y leftovers
+*.zip
+zijRx8q7
+
+# Planillas de trabajo locales
+*.xlsx
+*.xls
+
+# Backups
+*.bak
+*~
+
+# Claude / IDE
+.claude/
+.idea/
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secretos
+.env
+.env.*
+*.pem
